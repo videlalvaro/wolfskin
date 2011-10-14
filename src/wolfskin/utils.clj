@@ -11,6 +11,5 @@
         language (rmi/get-query-type qtype)]
     (rmi/get-nodes (rmi/execute (rmi/create-query qm statement language)))))
 
-(defn node-properties [props]
-  (map #(jcr/get-property-map (jcr/properties %)) props))
-
+(defn nodes-properties [nodes]
+  (map #(jcr/get-property-map (jcr/properties %)) nodes))

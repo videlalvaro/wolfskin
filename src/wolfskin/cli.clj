@@ -17,7 +17,7 @@
     (let [qtype (if sql? :sql :xpath)
           nodes (utils/run-query url username password workspace qtype query)
           ]
-      (pprint/pprint (utils/node-properties nodes)))))
+      (pprint/pprint (utils/nodes-properties nodes)))))
 
 
 
